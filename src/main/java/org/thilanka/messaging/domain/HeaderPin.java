@@ -118,7 +118,7 @@ public class HeaderPin {
 
   public boolean isInvalid() {
     // TODO Auto-generated method stub
-    return true;
+    return false;
   }
 
   @Override
