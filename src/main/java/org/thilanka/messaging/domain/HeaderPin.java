@@ -14,6 +14,8 @@ import org.thilanka.device.pin.PinValue;
  */
 public class HeaderPin {
 
+  private Action mAction;
+
   private String mName;
 
   private PinProperty mProperty;
@@ -25,6 +27,22 @@ public class HeaderPin {
   private PinDirection mDirection;
 
   private String mLabel = "default";
+
+  /**
+   * @return what type of message action this is.
+   */
+  public Action getAction() {
+    return mAction;
+  }
+
+  /**
+   * Sets the given message action for this GPIO pin.
+   * 
+   * @param pAction
+   */
+  public void setAction(Action pAction) {
+    mAction = pAction;
+  }
 
   /**
    * @return the corresponding name of the pin.

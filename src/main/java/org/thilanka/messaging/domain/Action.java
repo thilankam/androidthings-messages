@@ -9,6 +9,8 @@ package org.thilanka.messaging.domain;
  *
  */
 public enum Action {
+  REGISTER("register"),
+  EVENT("event"),
   SHUTDOWN("shutdown");
 
   private final String mName;
