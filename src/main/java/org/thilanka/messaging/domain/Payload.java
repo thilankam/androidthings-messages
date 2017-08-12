@@ -6,13 +6,15 @@ import org.thilanka.device.pin.PinProperty;
 import org.thilanka.device.pin.PinValue;
 
 /**
- * The java class that represents a Pin that gets serialized to json and back
- * during the communication with AppInventor and the AndroidThings board.
+ * The java class that represents the payload that gets serialized to json and
+ * back during the communication with AppInventor and the AndroidThings board.
  * 
  * @author Thilanka Munasinghe (thilankawillbe@gmail.com)
  *
  */
-public class HeaderPin {
+public class Payload {
+
+  private PeripheralIO mPeripheralIO;
 
   private Action mAction;
 
@@ -27,6 +29,21 @@ public class HeaderPin {
   private PinDirection mDirection;
 
   private String mLabel = "default";
+
+  /**
+   * @return the PeripheralIO
+   */
+  public PeripheralIO getPeripheralIO() {
+    return mPeripheralIO;
+  }
+
+  /**
+   * @param pPeripheralIO
+   *          the PeripheralIO to set
+   */
+  public void setPeripheralIO(PeripheralIO pPeripheralIO) {
+    mPeripheralIO = pPeripheralIO;
+  }
 
   /**
    * @return what type of message action this is.
@@ -141,7 +158,8 @@ public class HeaderPin {
 
   @Override
   public String toString() {
-    return "HeaderPin [number:" + mName + ", property:" + mProperty.toString()
+    return getClass().getSimpleName() + " [Peripheral IO : " + mPeripheralIO
+        + "number:" + mName + ", property:" + mProperty.toString()
         + ", value:" + mValue.toString() + ", androidThingsBoard:"
         + mAndroidThingsBoard.getName() + ", direction:" + mDirection.toString()
         + ", label: " + mLabel + "]";

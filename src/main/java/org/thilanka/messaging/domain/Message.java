@@ -29,11 +29,11 @@ public class Message {
     return sInstance;
   }
 
-  public static String constructPinMessage(HeaderPin pHeaderPin) {
-    return sGson.toJson(pHeaderPin);
+  public static String constructMessage(Payload pPayload) {
+    return sGson.toJson(pPayload);
   }
 
-  public static HeaderPin deconstrctPinMessage(String pMessage) {
-    return sGson.fromJson(pMessage, HeaderPin.class);
+  public static Payload deconstrctMessage(String pMessage) {
+    return sGson.fromJson(pMessage, Payload.class);
   }
 }

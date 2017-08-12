@@ -9,7 +9,8 @@ package org.thilanka.messaging.domain;
  *
  */
 public enum Topic {
-  INTERNAL("mit-appinventor/androidthings/internal/");
+  ANDROID_THINGS("/androidthings/"), 
+  APP_INVENTOR("/appinventor/");
 
   private final String mName;
 
@@ -25,4 +26,8 @@ public enum Topic {
     return mName;
   }
 
+  @Override
+  public String toString() {
+    return getName();
+  }
 }
