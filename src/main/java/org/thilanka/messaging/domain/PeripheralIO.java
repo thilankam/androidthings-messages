@@ -13,7 +13,8 @@ public enum PeripheralIO {
   SPI("spi"),
   UART("uart"),
   I2S("i2s"),
-  NATIVE_PIO("native_pio");
+  NATIVE_PIO("native_pio"),
+  TEMPERATURE_SENSOR("temperature_sensor");
 
   private final String mName;
 
