@@ -1,6 +1,5 @@
 package org.thilanka.messaging.domain;
 
-import org.thilanka.device.board.AndroidThingsBoard;
 import org.thilanka.device.pin.PinDirection;
 import org.thilanka.device.pin.PinProperty;
 import org.thilanka.device.pin.PinValue;
@@ -24,7 +23,7 @@ public class Payload {
 
   private PinValue mValue;
 
-  private AndroidThingsBoard mAndroidThingsBoard;
+  private String mAndroidThingsBoard;
 
   private PinDirection mDirection;
 
@@ -109,7 +108,7 @@ public class Payload {
   /**
    * @return the AndroidThingsBoard
    */
-  public AndroidThingsBoard getAndroidThingsBoard() {
+  public String getAndroidThingsBoard() {
     return mAndroidThingsBoard;
   }
 
@@ -117,7 +116,7 @@ public class Payload {
    * @param pAndroidThingsBoard
    *          the AndroidThingsBoard to set
    */
-  public void setAndroidThingsBoard(AndroidThingsBoard pAndroidThingsBoard) {
+  public void setAndroidThingsBoard(String pAndroidThingsBoard) {
     mAndroidThingsBoard = pAndroidThingsBoard;
   }
 
@@ -161,7 +160,7 @@ public class Payload {
     return getClass().getSimpleName() + " [Peripheral IO : " + mPeripheralIO
         + "number:" + mName + ", property:" + mProperty.toString()
         + ", value:" + mValue.toString() + ", androidThingsBoard:"
-        + mAndroidThingsBoard.getName() + ", direction:" + mDirection.toString()
+        + mAndroidThingsBoard + ", direction:" + mDirection.toString()
         + ", label: " + mLabel + "]";
   }
 
