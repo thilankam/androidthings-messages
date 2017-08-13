@@ -15,7 +15,8 @@ package org.thilanka.device.board;
 public class NXPiMX6UL implements AndroidThingsBoard {
 
   public enum Model {
-    NXP_I_MX6UL_PICO("NXP i.MX6 Pico"), NXP_I_MX6UL_ARGON("NXP i.MX6 Argon");
+    NXP_I_MX6UL_PICO("NXP i.MX6 Pico"),
+    NXP_I_MX6UL_ARGON("NXP i.MX6 Argon");
 
     private final String mName;
 

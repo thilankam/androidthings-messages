@@ -14,7 +14,8 @@ package org.thilanka.device.board;
 public class NXPiMX7D implements AndroidThingsBoard {
 
   public enum Model {
-    NXP_I_MX7D("NXP i.MX7D");
+    NXP_I_MX7D("NXP i.MX7D"),
+    NXP_I_MX7D_PICO("iot_imx7d_pico");
 
     private final String mName;
 
