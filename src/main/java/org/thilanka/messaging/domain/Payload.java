@@ -29,6 +29,8 @@ public class Payload {
 
   private String mLabel = "default";
 
+  private double mDoubleValue;
+
   /**
    * @return the PeripheralIO
    */
@@ -106,6 +108,22 @@ public class Payload {
   }
 
   /**
+   * @return the value if it is a double.
+   */
+  public double getDoubleValue() {
+    return mDoubleValue;
+  }
+
+  /**
+   * Set the value if it is a double
+   * 
+   * @param pDoubleValue
+   */
+  public void setDoubleValue(double pDoubleValue) {
+    mDoubleValue = pDoubleValue;
+  }
+
+  /**
    * @return the AndroidThingsBoard
    */
   public String getAndroidThingsBoard() {
@@ -158,11 +176,13 @@ public class Payload {
   @Override
   public String toString() {
     return getClass().getSimpleName() + " [Peripheral IO : " + mPeripheralIO
-        + "number:" + mName + ", property:" + mProperty.toString()
-        + ", value:" + mValue.toString() + ", androidThingsBoard:"
+        + "number:" + mName + ", property:"
+        + (mProperty == null ? "" : mProperty.toString())
+        + ", value:" + (mValue == null ? "" : mValue.toString())
+        + ", doubleValue:" + mDoubleValue
+        + ", androidThingsBoard:"
         + mAndroidThingsBoard + ", direction:" + (mDirection == null
             ? PinDirection.IN.toString() : mDirection.toString())
         + ", label: " + mLabel + "]";
   }
-
 }

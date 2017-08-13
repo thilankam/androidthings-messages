@@ -9,7 +9,8 @@ package org.thilanka.device.pin;
  *
  */
 public enum PinProperty {
-  PIN_STATE("pinState"), REGISTER("registerPin");
+  PIN_STATE("pinState"), REGISTER("registerPin"), DUTY_CYCLE(
+      "dutyCycle"), FREQUENCY("frequency");
 
   private final String mName;
 
