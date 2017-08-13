@@ -10,7 +10,7 @@ package org.thilanka.device.pin;
  */
 public enum PinProperty {
   PIN_STATE("pinState"), REGISTER("registerPin"), DUTY_CYCLE(
-      "dutyCycle"), FREQUENCY("frequency");
+      "dutyCycle"), FREQUENCY("frequency"), TEMPERATURE("temperature");
 
   private final String mName;
 
