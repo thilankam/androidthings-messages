@@ -160,7 +160,8 @@ public class Payload {
     return getClass().getSimpleName() + " [Peripheral IO : " + mPeripheralIO
         + "number:" + mName + ", property:" + mProperty.toString()
         + ", value:" + mValue.toString() + ", androidThingsBoard:"
-        + mAndroidThingsBoard + ", direction:" + mDirection.toString()
+        + mAndroidThingsBoard + ", direction:" + (mDirection == null
+            ? PinDirection.IN.toString() : mDirection.toString())
         + ", label: " + mLabel + "]";
   }
 
